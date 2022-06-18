@@ -17,7 +17,7 @@ namespace Hydra.Esrmnt.Durable.AF.TriggerFunctions
         [DurableClient] IDurableOrchestrationClient starter,
         ILogger log)
         {
-            var instanceId = await starter.StartNewAsync("ImportTransactionOrchestrator", null);
+            var instanceId = await starter.StartNewAsync("OrchestratorFunction", null);
         }
     }
 }
