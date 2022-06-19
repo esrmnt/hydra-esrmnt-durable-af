@@ -18,7 +18,7 @@ defaults:
 
 jobs:
     deploy-az-infrastructure:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
 
        # Authentication
@@ -50,7 +50,7 @@ jobs:
 
     build-az-function:
       needs: [deploy-az-infrastructure]
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
       
        # Makes source code accessible via $github.workspace
@@ -84,7 +84,7 @@ jobs:
 
     deploy-az-function:
       needs: [build-az-function]
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
       
        # Makes source code accessible via $github.workspace
